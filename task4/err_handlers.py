@@ -14,12 +14,14 @@ def input_error(func):
             return f"[ERROR]: {str(e)}"
     return inner
 
+
 def handle_value_error(func_name: str) -> str:
     error_messages = {
         'add_contact': 'Enter both a name and phone number after the "add" command.',
         'change_contact': 'Enter both a name and phone number after the "change" command.'
     }
     return error_messages.get(func_name, default_message)
+
 
 def handle_index_error(func_name: str) -> str:
     error_messages = {
